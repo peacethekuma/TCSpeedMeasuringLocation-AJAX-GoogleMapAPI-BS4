@@ -79,8 +79,8 @@ function printList(e) {
         return item.RegionName === e.target.value;
     });
     console.log(selectedData[0].RegionName);
-    let str = `<h3 class="text-light">${e.target.value}</h3>
-                    <ul class="list-group" style="overflow:scroll;height: 628px">
+    let str = `<h4 class="text-light">${e.target.value}</h3>
+                    <ul class="list-group" style="overflow:scroll;height: 480px">
                 `
     for (let i = 0; i < selectedData.length; i++) {
             let content = `
