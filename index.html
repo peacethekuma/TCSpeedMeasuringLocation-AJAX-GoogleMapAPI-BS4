@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>臺中市測速執法設置點</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <style>
+        #map {
+            height: 670px;
+        }
+        .bg-cover{
+            background-size: cover;
+            background-position: center center;
+        }
+        li:hover{
+            cursor: pointer;
+        }
+        .actived{
+            background-color:#a8c8fce8;
+        }
+        .footer{
+            width: 100%;
+            position:absolute;
+            height: 75px;
+            bottom:0px;
+            left:0px;
+        }
+        .wrap{
+            position:relative;  
+            min-height:100%; 
+            padding-bottom: 75px;  
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap bg-cover" style="background-image: url(img/nikita-andreev-409987-unsplash.jpg);">
+        <div class="header container-fluid bg-warning">
+            <h1 class="text-center text-dark pt-4 h3">臺中市測速執法設置點</h1>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <select class="custom-select my-3">
+                        <option selected>請選擇地區</option>
+                        <option value="中區">中區</option>
+                        <option value="東區">東區</option>
+                        <option value="南區">南區</option>
+                        <option value="西區">西區</option>
+                        <option value="北區">北區</option>
+                        <option value="北屯區">北屯區</option>
+                        <option value="西屯區">西屯區</option>
+                        <option value="南屯區">南屯區</option>
+                        <option value="太平區">太平區</option>
+                        <option value="大里區">大里區</option>
+                        <option value="霧峰區">霧峰區</option>
+                        <option value="烏日區">烏日區</option>
+                        <option value="豐原區">豐原區</option>
+                        <option value="后里區">后里區</option>
+                        <option value="石岡區">石岡區</option>
+                        <option value="東勢區">東勢區</option>
+                        <option value="潭子區">潭子區</option>
+                        <option value="大雅區">大雅區</option>
+                        <option value="神岡區">神岡區</option>
+                        <option value="大肚區">大肚區</option>
+                        <option value="沙鹿區">沙鹿區</option>
+                        <option value="龍井區">龍井區</option>
+                        <option value="梧棲區">梧棲區</option>
+                        <option value="清水區">清水區</option>
+                        <option value="大甲區">大甲區</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="container content py-4">
+            <div class="row">
+                <div class="mapArea col-md-8 pb-5">
+                    <div id="map" class="rounded">
+                    </div>
+                </div>
+                <div id="listArea" class="col-md-4 d-none d-md-block d-lg-block ">
+                    <div class="text-light h4">請選擇行政區</div>
+                    <!-- <h3 class="text-light">豐原區</h3> -->
+                    <!-- <ul class="list-group" style="overflow:scroll;height: 500px">
+                        <li class="list-group-item active">  
+                            <p class="h6 text-center p-1 mb-3 mt-0 bg-secondary text-light rounded">編號：1</p>
+                            <p class="text-danger h5 mt-0 mb-3">速限 50</p>
+                            <p class="mb-1">地點：圓環北路二段與大順街口</p>
+                            <p class="pb-2">方向：西向東</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="h6 font-weight-bold text-right">2</p>
+                            <p class="text-danger h5">速限 50</p>
+                            <p>地點：圓環北路二段與大順街口</p>
+                            <p>方向：西向東</p>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        
+        </div>
+        <div class="footer bg-dark text-white text-center mb-0">
+            <h5 class="pt-4">Coded by Kuma Chan</h4>
+        </div>
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-Ukgt03o-YAhVyaLw_gvX1l9pVcu6Lqo&callback=initMap">
+    </script>
+    <script src="JS/all.js"></script>
+</body>
+</html>
